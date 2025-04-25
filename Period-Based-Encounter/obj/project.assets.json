@@ -1,0 +1,79 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net8.0": []
+  },
+  "packageFolders": {
+    "/Users/avinashsahani/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/avinashsahani/RiderProjects/Coding-Assesment-MH-/Period-Based-Encounter/Period-Based-Encounter.csproj",
+      "projectName": "Period-Based-Encounter",
+      "projectPath": "/Users/avinashsahani/RiderProjects/Coding-Assesment-MH-/Period-Based-Encounter/Period-Based-Encounter.csproj",
+      "packagesPath": "/Users/avinashsahani/.nuget/packages/",
+      "outputPath": "/Users/avinashsahani/RiderProjects/Coding-Assesment-MH-/Period-Based-Encounter/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/avinashsahani/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/Users/avinashsahani/.dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /Users/avinashsahani/RiderProjects/Coding-Assesment-MH-/Period-Based-Encounter/obj/project.nuget.cache : Found invalid data while decoding."
+    }
+  ]
+}

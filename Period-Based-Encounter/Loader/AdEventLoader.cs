@@ -30,7 +30,9 @@ public class AdtEventLoader
             EventId =   row.GetAs<int>("EventID"),
             PatientId = row.GetAs<int>("PatientID"),
             HospitalName = row.GetAs<string>("HospitalName"),
-            EventDate = DateOnly.TryParse(row.GetAs<string>("EventDate"), out var parsedDate) ? parsedDate : null,
+            EventDate = DateTime.TryParse(row.GetAs<string>("EventDate"), out var dt)
+                ? DateOnly.FromDateTime(dt)
+                : DateOnly.MinValue,
             EventType =  Enum.TryParse<EventType>(row.GetAs<string>("EventType"), ignoreCase: true, out var parsedEventType)
                 ? parsedEventType
                 : EventType.None,

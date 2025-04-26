@@ -13,8 +13,5 @@
       <PackageReference Include="Deedle" Version="3.0.0" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Output\" />
-    </ItemGroup>
-
+   
 </Project>

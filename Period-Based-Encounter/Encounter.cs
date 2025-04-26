@@ -7,10 +7,10 @@ namespace Period_Based_Encounter
 {
     public class Encounter
     {
- 
-
+        
         public static void Main(string[] args)
         {
+            Console.WriteLine(ConsoleMessages.GeneratingOutputMessage);
             var filePath = BuildInputFilePath();
 
             var eventRecords = LoadEventRecords(filePath);
@@ -18,6 +18,7 @@ namespace Period_Based_Encounter
             var (validRecords, invalidRecords) = ProcessEventRecords(eventRecords);
 
             ExportResults(validRecords, invalidRecords);
+            Console.WriteLine(ConsoleMessages.OutputFileGeneratedMessage);
         }
 
         private static string BuildInputFilePath()
@@ -30,7 +31,27 @@ namespace Period_Based_Encounter
         private static List<AdtEventRecord> LoadEventRecords(string filePath)
         {
             var loader = new AdtEventLoader();
-            return loader.LoadFromCsv(filePath);
+
+            try
+            {
+                if (!File.Exists(filePath))
+                {
+                    Console.WriteLine($"Error: The file '{filePath}' does not exist.");
+                    return new List<AdtEventRecord>();
+                }
+
+                return loader.LoadFromCsv(filePath);
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"Error reading file '{filePath}': {ex.Message}");
+                return new List<AdtEventRecord>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Unexpected error while loading events: {ex.Message}");
+                return new List<AdtEventRecord>();
+            }
         }
 
         private static (List<EncounterRecord>, List<InvalidEncounterRecord>) ProcessEventRecords(List<AdtEventRecord> records)

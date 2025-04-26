@@ -90,7 +90,7 @@ public class EncounterProcessor
 
     private void AddEventRecord(AdtEventRecord record)
     {
-        _eventRecords[record.PatientId] = record;
+        _eventRecords.Add(record.PatientId, record);
     }
 
     private void AddRemainingAdmitOnlyRecords()

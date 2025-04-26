@@ -11,7 +11,6 @@ public class AdtEventLoader
     public List<AdtEventRecord> LoadFromCsv(string filePath)
     {
          var records = new List<AdtEventRecord>();
-      Console.WriteLine($"Reading and Processing");
         var frame = Frame.ReadCsv(filePath);
         var rows = frame.Rows;
         for(int i=0; i<frame.RowCount; i++)

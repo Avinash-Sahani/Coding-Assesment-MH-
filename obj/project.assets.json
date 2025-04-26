@@ -438,11 +438,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/avinashsahani/RiderProjects/assesment/Period-Based-Encounter.csproj",
+      "projectUniqueName": "/Users/avinashsahani/RiderProjects/Coding-Assesment-MH-/Final-Assesmen/Period-Based-Encounter.csproj",
       "projectName": "Period-Based-Encounter",
-      "projectPath": "/Users/avinashsahani/RiderProjects/assesment/Period-Based-Encounter.csproj",
+      "projectPath": "/Users/avinashsahani/RiderProjects/Coding-Assesment-MH-/Final-Assesmen/Period-Based-Encounter.csproj",
       "packagesPath": "/Users/avinashsahani/.nuget/packages/",
-      "outputPath": "/Users/avinashsahani/RiderProjects/assesment/obj/",
+      "outputPath": "/Users/avinashsahani/RiderProjects/Coding-Assesment-MH-/Final-Assesmen/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/avinashsahani/.nuget/NuGet/NuGet.Config"

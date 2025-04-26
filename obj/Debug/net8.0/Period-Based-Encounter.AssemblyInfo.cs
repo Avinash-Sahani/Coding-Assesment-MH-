@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Period-Based-Encounter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bae841f96cd2a3beb16fff5c35299c8ea500a34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe02e06fba9dc982e39cbc6821503bcb5c529f2e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Period-Based-Encounter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Period-Based-Encounter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

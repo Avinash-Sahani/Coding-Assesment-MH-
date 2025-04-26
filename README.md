@@ -4,6 +4,7 @@ This C# console application processes ADT (Admit, Discharge, Transfer) events to
 
 ---
 📂 The `Output` folder contains the final file named `Encounter_Records_Output.xlsx`, which has two sheets: **Valid Records** and **Invalid Records**.
+**When you run the project it delete old output file and genereate a new one**
 
 ✅ **Valid Records**: Records that follow all business rules and represent complete or ongoing encounters.
 
@@ -48,7 +49,7 @@ This C# console application processes ADT (Admit, Discharge, Transfer) events to
 
    ```bash
    git clone https://github.com/Avinash-Sahani/Coding-Assesment-MH-.git
-   cd Period_Based_Encounter
+   
 
 2. **Build Project:**
    ```bash

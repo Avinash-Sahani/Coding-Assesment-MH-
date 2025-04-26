@@ -9,6 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="ClosedXML" Version="0.105.0-rc" />
       <PackageReference Include="Deedle" Version="3.0.0" />
     </ItemGroup>
 

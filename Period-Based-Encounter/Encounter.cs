@@ -1,22 +1,49 @@
 using Period_Based_Encounter.Loader;
+using System;
+using Period_Based_Encounter.Constants;
+using Period_Based_Encounter.Models;
 
-namespace Period_Based_Encounter;
-
-public class Encounter
+namespace Period_Based_Encounter
 {
-    public static void Main(string[] args)
+    public class Encounter
     {
-        var solutionDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", ".."));
-        var filePath = Path.Combine(solutionDirectory, "Input", "EncounterNotificationSampleData.csv");
-        var loader = new AdtEventLoader();
-        var data =       loader.LoadFromCsv(filePath);
-        var processor = new EncounterProcessor();
-        processor.ProcessRecords(data);
-        var (validRecords, invalidRecords) = processor.GetRecords();
-        var outptutProcessor = new EncounterOutputProcessor(validRecords, invalidRecords);
-        outptutProcessor.ExportRecordsToCsvWithSections();
-      
-  
+ 
 
+        public static void Main(string[] args)
+        {
+            var filePath = BuildInputFilePath();
+
+            var eventRecords = LoadEventRecords(filePath);
+
+            var (validRecords, invalidRecords) = ProcessEventRecords(eventRecords);
+
+            ExportResults(validRecords, invalidRecords);
+        }
+
+        private static string BuildInputFilePath()
+        {
+            var baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            var solutionDir = Path.GetFullPath(Path.Combine(baseDir, "..", "..", ".."));
+            return Path.Combine(solutionDir, DirectoryConstants.InputFolderName, DirectoryConstants.InputFileName);
+        }
+
+        private static List<AdtEventRecord> LoadEventRecords(string filePath)
+        {
+            var loader = new AdtEventLoader();
+            return loader.LoadFromCsv(filePath);
+        }
+
+        private static (List<EncounterRecord>, List<InvalidEncounterRecord>) ProcessEventRecords(List<AdtEventRecord> records)
+        {
+            var processor = new EncounterProcessor();
+            processor.ProcessRecords(records);
+            return processor.GetRecords();
+        }
+
+        private static void ExportResults(List<EncounterRecord> validRecords, List<InvalidEncounterRecord> invalidRecords)
+        {
+            var outputProcessor = new EncounterOutputProcessor(validRecords, invalidRecords);
+            outputProcessor.ExportRecordsToCsvWithSections();
+        }
     }
 }

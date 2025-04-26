@@ -9,7 +9,14 @@ public class Encounter
         var solutionDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", ".."));
         var filePath = Path.Combine(solutionDirectory, "Input", "EncounterNotificationSampleData.csv");
         var loader = new AdtEventLoader();
-        loader.LoadFromCsv(filePath);
+        var data =       loader.LoadFromCsv(filePath);
+        var processor = new EncounterProcessor();
+        processor.ProcessRecords(data);
+        var (validRecords, invalidRecords) = processor.GetRecords();
+        var outptutProcessor = new EncounterOutputProcessor(validRecords, invalidRecords);
+        outptutProcessor.ExportRecordsToCsvWithSections();
+      
+  
 
     }
 }

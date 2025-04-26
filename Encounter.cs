@@ -64,7 +64,7 @@ namespace Period_Based_Encounter
         private static void ExportResults(List<EncounterRecord> validRecords, List<InvalidEncounterRecord> invalidRecords)
         {
             var outputProcessor = new EncounterOutputProcessor(validRecords, invalidRecords);
-            outputProcessor.ExportRecordsToCsvWithSections();
+            outputProcessor.ExportRecordsToExcel();
         }
     }
 }

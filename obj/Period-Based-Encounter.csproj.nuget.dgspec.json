@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/avinashsahani/RiderProjects/Coding-Assesment-MH-/Period-Based-Encounter/Period-Based-Encounter.csproj": {}
+    "/Users/avinashsahani/RiderProjects/assesment/Period-Based-Encounter.csproj": {}
   },
   "projects": {
-    "/Users/avinashsahani/RiderProjects/Coding-Assesment-MH-/Period-Based-Encounter/Period-Based-Encounter.csproj": {
+    "/Users/avinashsahani/RiderProjects/assesment/Period-Based-Encounter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/avinashsahani/RiderProjects/Coding-Assesment-MH-/Period-Based-Encounter/Period-Based-Encounter.csproj",
+        "projectUniqueName": "/Users/avinashsahani/RiderProjects/assesment/Period-Based-Encounter.csproj",
         "projectName": "Period-Based-Encounter",
-        "projectPath": "/Users/avinashsahani/RiderProjects/Coding-Assesment-MH-/Period-Based-Encounter/Period-Based-Encounter.csproj",
+        "projectPath": "/Users/avinashsahani/RiderProjects/assesment/Period-Based-Encounter.csproj",
         "packagesPath": "/Users/avinashsahani/.nuget/packages/",
-        "outputPath": "/Users/avinashsahani/RiderProjects/Coding-Assesment-MH-/Period-Based-Encounter/obj/",
+        "outputPath": "/Users/avinashsahani/RiderProjects/assesment/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/avinashsahani/.nuget/NuGet/NuGet.Config"
@@ -42,6 +42,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Deedle": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

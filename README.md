@@ -10,6 +10,7 @@ This C# console application processes ADT (Admit, Discharge, Transfer) events to
 
 ❌ **Invalid Records**: Records that violate one or more business rules, such as missing admits, overlapping encounters, or unexpected transfers.
 
+Note : Each patient can have only one encounter record
 ## ✅ Assumptions
 
 1. **Discharge Without Admit is Invalid**  

@@ -20,6 +20,8 @@ Note : Each patient can have only one encounter record
    When multiple admit events exist for the same patient at the same hospital:
     - The **Start Date** is taken from the **first admit**.
     - The **Chief Complaint** and **Level of Care** are updated from the **latest admit**.
+   - **Note** : The second admit would be haven treated as an Transfer Event will make more data valuable.
+
 
 3. **Transfer Without Discharge is Invalid**  
    If a patient is admitted to a new hospital without a discharge from the previous hospital, the new admit is marked invalid. 

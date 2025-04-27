@@ -18,22 +18,19 @@ public static class ValidationHelper
     {
         return string.Equals(hospitalName, previousHospitalName, StringComparison.OrdinalIgnoreCase);
     }
-
-
-    public static bool IsValidDate(string dateStr)
-    {
-        return DateTime.TryParse(dateStr, out _);
-    }
-
-    public static bool IsValidPatientId(int patientId)
-    {
-        return patientId > 0;
-    }
-
+    
     public static bool IsStartDateBeforeOrEqualEndDate(DateOnly? startDate, DateOnly? endDate)
     {
         if (startDate == null || endDate == null)
             return false;
         return startDate <= endDate;
+    }
+    
+    public static bool HasMandatoryFields(AdtEventRecord record)
+    {
+        return record.PatientId != 0
+               && !string.IsNullOrWhiteSpace(record.HospitalName)
+               && record.EventDate != default
+               && Enum.IsDefined(typeof(EventType), record.EventType);
     }
 }

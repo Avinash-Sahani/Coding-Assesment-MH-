@@ -23,6 +23,7 @@ Note : Each patient can have only one encounter record
 
 3. **Transfer Without Discharge is Invalid**  
    If a patient is admitted to a new hospital without a discharge from the previous hospital, the new admit is marked invalid.
+   Note : The better approach would be to treat as Transfer Event which shows the patient has been transferred to other hospital
 
 4. **Ongoing Admissions Are Considered Valid**  
    An admit event without a corresponding discharge is treated as valid. The **Length of Stay** is as 0 for them as they have not been discharged yet.

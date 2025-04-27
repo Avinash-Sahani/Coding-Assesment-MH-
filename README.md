@@ -25,6 +25,7 @@ This C# console application processes ADT (Admit, Discharge, Transfer) events to
 
 4. **Ongoing Admissions Are Considered Valid**  
    An admit event without a corresponding discharge is treated as valid. The **Length of Stay** is as 0 for them as they have not been discharged yet.
+5. **If any of **PatientID**, **HospitalName**, **EventDate**, or **EventType** is missing or invalid, the record will be treated as an **Invalid Record****
 
 
 ## 📚 Class Responsibilities
@@ -41,7 +42,8 @@ This C# console application processes ADT (Admit, Discharge, Transfer) events to
 ---
 
 ## ▶️ How to Run
-
+Prerequisite: Make sure you have .NET SDK 8.0 installed.
+You can download it from https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 
 ### Steps
 

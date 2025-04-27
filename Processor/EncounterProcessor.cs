@@ -24,6 +24,12 @@ public class EncounterProcessor
 
     private void ProcessRecord(AdtEventRecord record)
     {
+        if (!ValidationHelper.HasMandatoryFields(record))
+        {
+            _invalidRecords.Add(record.ToInvalid(ErrorMessages.MandatoryFieldsMissing));
+            return;
+        }
+        
         if (!_eventRecords.TryGetValue(record.PatientId, out var currentRecord))
         {
             HandleNewRecord(record);

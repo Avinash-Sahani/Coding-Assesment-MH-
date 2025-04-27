@@ -7,4 +7,5 @@ public static class ErrorMessages
     public const string DischargeDifferentHospital = "Discharge from hospital '{0}' does not match admit hospital '{1}'.";
     public const string DischargeBeforeAdmitDate = "Discharge date {1} is before admit date {0}.";
     public const string AdmitToNewHospitalWithoutDischarge = "Patient admitted to '{1}' without being discharged from previous hospital '{0}'.";
+    public const string MandatoryFieldsMissing = "Mandatory fields (PatientID, HospitalName, EventDate, EventType) are missing.";
 }
